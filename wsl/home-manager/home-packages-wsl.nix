@@ -62,6 +62,7 @@
     alejandra
     corepack_latest
     bun
+    gnumake
     yazi
     lazygit
     lazydocker
