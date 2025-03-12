@@ -12,8 +12,8 @@ alias del = sudo nix-store --gc
 alias ndev = nix develop
 alias open = xdg-open
 def cdev [] {
-    nix flake update ~/nix/c-dev
-    nix develop ~/nix/c-dev
+    nix flake update ~/nix/cdev
+    nix develop ~/nix/cdev
 }
 
 # Yarn berry alias
