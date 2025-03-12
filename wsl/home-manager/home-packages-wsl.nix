@@ -14,6 +14,7 @@
     rustup
     python311
     # Utils
+    pkg-config
     gcc
     gdb
     check
