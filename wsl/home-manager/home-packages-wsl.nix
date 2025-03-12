@@ -58,6 +58,7 @@
     cargo-cache
     cargo-expand
     fnm
+    fastfetch
     alejandra
     yazi
     lazygit
