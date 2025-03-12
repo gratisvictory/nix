@@ -8,15 +8,16 @@
     # Languages
     nix
     bash
-    gcc
-    check
-    libgcc
     go
     typescript
     nodejs
     rustup
     python311
     # Utils
+    gcc
+    gdb
+    check
+    libgcc
     silicon
     git-graph
     microfetch
