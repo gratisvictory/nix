@@ -2,14 +2,14 @@
 alias v = vim
 alias nv = neovim
 alias fast = fastfetch
-alias version = nixos-version
+alias nixver = nixos-version
 alias nixcollect = sudo nix-collect-garbage -d
 alias flake = sudo nixos-rebuild switch --flake ~/nix
 alias flakeup = nix flake update
 alias flakereboot = sudo nixos-rebuild switch --flake ~/nix --reboot
 alias pref = nix-prefetch-url
-alias la = ls -a
-alias ll = ls -al
+alias del = sudo nix-store --gc
+alias cc = clean
 
 # Yarn berry alias
 alias y = yarn

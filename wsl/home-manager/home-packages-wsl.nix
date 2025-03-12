@@ -1,18 +1,18 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  nixpkgs,
+  ...
+}: {
   nixpkgs.config.allowUnfree = true;
-
   home.packages = with pkgs; [
     # Languages
     nix
     bash
     libgcc
     go
-    terraform
     typescript
     nodejs
-    rust
     rustup
-    cargo
     python311
     # Utils
     silicon
@@ -50,9 +50,6 @@
     helix
     carapace
     prisma
-    rustfmt
-    neovim
-    rustcat
     eslint
     nodePackages.prettier
     dockfmt
