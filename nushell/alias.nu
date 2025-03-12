@@ -11,10 +11,15 @@ alias pref = nix-prefetch-url
 alias del = sudo nix-store --gc
 alias ndev = nix develop
 alias open = xdg-open
+alias dirallow = direnv allow
+alias dirdeny = direnv deny
+alias dirclean = rm -rf ~/.cache/nix-direnv
+
 def cdev [] {
-    nix flake update ~/nix/cdev
-    nix develop ~/nix/cdev
+    echo "use flake ~/nix/cdev" | save .envrc
+    direnv allow
 }
+
 
 # Yarn berry alias
 alias y = yarn
