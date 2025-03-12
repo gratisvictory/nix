@@ -9,7 +9,6 @@ alias flakeup = nix flake update
 alias flakereboot = sudo nixos-rebuild switch --flake ~/nix --reboot
 alias pref = nix-prefetch-url
 alias del = sudo nix-store --gc
-alias cc = clean
 
 # Yarn berry alias
 alias y = yarn
