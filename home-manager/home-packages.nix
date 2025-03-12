@@ -34,6 +34,7 @@
     git-crypt
     htop
     jq
+    fnm
     killall
     ripgrep
     sd

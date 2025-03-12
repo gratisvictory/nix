@@ -1,7 +1,3 @@
-# this file is both a valid
-# - overlay which can be loaded with `overlay use starship.nu`
-# - module which can be used with `use starship.nu`
-# - script which can be used with `source starship.nu`
 export-env { $env.STARSHIP_SHELL = "nu"; load-env {
     STARSHIP_SESSION_KEY: (random chars -l 16)
     PROMPT_MULTILINE_INDICATOR: (

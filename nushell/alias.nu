@@ -2,7 +2,11 @@
 alias v = vim
 alias nv = neovim
 alias fast = fastfetch
+alias version = nixos-version
+alias nixcollect = sudo nix-collect-garbage -d
 alias flake = sudo nixos-rebuild switch --flake ~/nix
+alias flakeup = nix flake update
+alias flakereboot = sudo nixos-rebuild switch --flake ~/nix --reboot
 alias la = ls -a
 alias ll = ls -al
 
@@ -18,8 +22,9 @@ alias yl = yarn lint
 alias ylf = yarn lint:fix
 alias yd = yarn dev
 alias yrm = yarn remove
-alias yr = yarn run
-alias ys = yarn start
+alias yrun = yarn run
+alias yst = yarn start
+alias ys = yarn serve
 alias yt = yarn test
 alias ytc = yarn test --coverage
 alias yui = yarn upgrade-interactive
@@ -37,11 +42,11 @@ alias cr = cargo run
 alias ca = cargo add
 
 # Pnpm alias
-alias pi = pnpm install
 alias pc = pnpm clean
 alias prv = pnpm preview
 alias pb = pnpm build
 alias pad = pnpm add -D
+alias pi = pnpm install
 alias pd = pnpm dev
 alias pa = pnpm add
 alias ps = pnpm start
@@ -56,4 +61,3 @@ alias pexec = pnpm exec
 alias pup = pnpm update
 alias prm = pnpm remove
 alias pg = pnpm generate
-

@@ -57,6 +57,7 @@
     udisks
     ueberzugpp
     w3m
+    fnm
     wl-clipboard
     wtype
     yt-dlp
