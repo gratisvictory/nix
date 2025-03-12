@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  pkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
     # Languages
