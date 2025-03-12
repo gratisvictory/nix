@@ -2,14 +2,14 @@
   programs.bat = {
     enable = true;
     themes = {
-      dracula = {
+      catppuccin = {
         src = pkgs.fetchFromGitHub {
-          owner = "Briles";
-          repo = "gruvbox";
-          rev = "75407cc80c51814d61beb1df07e380d6f58ad767";
-          sha256 = "186rhbljw80psf1l8hyj02ycz1wzxv4rxmbrqr8yvi30165drpay";
+          owner = "catppuccin";
+          repo = "bat";
+          rev = "main";
+          sha256 = "1glmv225brinkbcf49mzn72hqy6rs2hmcw71shvn6zrgsgzm0rx5";
         };
-        file = "gruvbox (Dark) (Medium).sublime-color-scheme";
+        file = "catppuccin-mocha.bat-theme";
       };
     };
   };

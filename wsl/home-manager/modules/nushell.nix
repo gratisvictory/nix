@@ -6,5 +6,6 @@
     };
     carapace.enable = true;
     carapace.enableNushellIntegration = true;
+    direnv.enableNushellIntegration = true;
   };
 }

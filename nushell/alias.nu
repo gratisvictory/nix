@@ -7,6 +7,7 @@ alias nixcollect = sudo nix-collect-garbage -d
 alias flake = sudo nixos-rebuild switch --flake ~/nix
 alias flakeup = nix flake update
 alias flakereboot = sudo nixos-rebuild switch --flake ~/nix --reboot
+alias pref = nix-prefetch-url
 alias la = ls -a
 alias ll = ls -al
 

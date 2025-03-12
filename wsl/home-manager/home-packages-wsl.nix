@@ -1,82 +1,69 @@
 {pkgs, ...}: {
-  nixpkgs.config.allowUnfree = true;
+  pkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-    yazi
-    lazygit
-    bat
-    bottom
-    coreutils
-    curl
-    du-dust
-    fd
-    fx
-    git
-    git-crypt
-    htop
-    jq
-    killall
-    ripgrep
+    # Languages
+    nix
+    bash
+    libgcc
+    go
+    terraform
+    typescript
+    nodejs
+    rust
+    rustup
+    cargo
+    python311
+    # Utils
+    silicon
+    git-graph
+    microfetch
+    fzf
+    ntfs3g
+    bc
+    statix
+    shellcheck
+    deadnix
+    tree-sitter
+    zip
+    gh
+    wget
+    vim
+    unzip
     eza
     sd
-    unzip
-    vim
-    wget
-    zip
+    ripgrep
+    killall
+    jq
+    fx
+    curl
+    fd
+    du-dust
+    coreutils
+    bat
+    htop
+    bottom
     nushell
-    nufmt
     starship
-    gh
-    rustup
+    git
+    git-crypt
+    helix
+    carapace
+    prisma
+    rustfmt
+    neovim
+    rustcat
+    eslint
+    nodePackages.prettier
+    dockfmt
+    valgrind
+    lcov
     cargo-cache
     cargo-expand
-    tree-sitter
-    nil
-    alejandra
-    deadnix
-    shellcheck
-    shfmt
-    statix
-
-    # CLI utils (cont.)
-    bc
-    brightnessctl
-    cliphist
-    ffmpeg
-    ffmpegthumbnailer
-    fzf
-    git-graph
-    grimblast
-    hyprpicker
-    ntfs3g
-    mediainfo
-    microfetch
-    playerctl
-    showmethekey
-    silicon
-    udisks
-    ueberzugpp
-    w3m
     fnm
-    wl-clipboard
-    wtype
-    yt-dlp
-
-    # Languages
-    bash
-    go
-    # terraform
-    typescript
-
-    # Coding tools
-    openjdk23
-    nodejs
-
-    # Utils for languages
-    dockfmt
-
-    # Other
-    bemoji
-    nix-prefetch-scripts
+    alejandra
+    yazi
+    lazygit
+    lazydocker
   ];
 }
