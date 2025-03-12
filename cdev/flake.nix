@@ -24,13 +24,10 @@
           valgrind
           lcov
           clang-tools
-          nushell
           subunit
           firefox
+          xdg-utils
         ];
-        shellHook = ''
-          nu
-        '';
       };
     });
 }
