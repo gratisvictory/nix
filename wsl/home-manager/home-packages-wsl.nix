@@ -60,6 +60,8 @@
     fnm
     fastfetch
     alejandra
+    corepack_latest
+    bun
     yazi
     lazygit
     lazydocker
