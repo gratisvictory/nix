@@ -1,4 +1,5 @@
 {
+  pkgs,
   stateVersion,
   username,
   ...
@@ -17,6 +18,9 @@
 
   programs.direnv = {
     enable = true;
-    nix-direnv.enable = true;
+    enableNushellIntegration = true;
+    nix-direnv = {
+      enable = true;
+    };
   };
 }
