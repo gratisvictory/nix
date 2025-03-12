@@ -8,6 +8,8 @@
     # Languages
     nix
     bash
+    gcc
+    check
     libgcc
     go
     typescript
