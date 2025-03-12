@@ -20,6 +20,7 @@
     check
     libgcc
     silicon
+    nix-direnv
     git-graph
     microfetch
     fzf
