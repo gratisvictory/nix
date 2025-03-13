@@ -15,11 +15,6 @@
     rustup
     python311
     # Utils
-    pkg-config
-    gcc
-    gdb
-    check
-    libgcc
     silicon
     nix-direnv
     git-graph
@@ -59,8 +54,6 @@
     eslint
     nodePackages.prettier
     dockfmt
-    valgrind
-    lcov
     cargo-cache
     cargo-expand
     fnm
@@ -68,7 +61,6 @@
     alejandra
     corepack_latest
     bun
-    gnumake
     yazi
     lazygit
     lazydocker
