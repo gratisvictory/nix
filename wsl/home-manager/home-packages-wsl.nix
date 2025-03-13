@@ -9,6 +9,7 @@
     nix
     bash
     go
+    zig
     typescript
     nodejs
     rustup

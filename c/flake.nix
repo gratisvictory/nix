@@ -27,6 +27,7 @@
           subunit
           firefox
           xdg-utils
+          cppcheck
         ];
       };
     });

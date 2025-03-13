@@ -15,11 +15,15 @@ alias dirallow = direnv allow
 alias dirdeny = direnv deny
 alias dirclean = rm -rf ~/.cache/nix-direnv
 
-def cdev [] {
+def c [] {
     echo "use flake ~/nix/cdev" | save .envrc
     direnv allow
 }
 
+# def cpp [] {
+#     echo "use flake ~/nix/c" | save .envrc
+#     direnv allow
+# }
 
 # Yarn berry alias
 alias y = yarn
