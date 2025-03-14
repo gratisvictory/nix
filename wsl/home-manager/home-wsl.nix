@@ -16,11 +16,13 @@
     stateVersion = stateVersion;
   };
 
-  programs.direnv = {
-    enable = true;
-    enableNushellIntegration = true;
-    nix-direnv = {
+  programs = {
+    direnv = {
       enable = true;
+      enableNushellIntegration = true;
+      nix-direnv = {
+        enable = true;
+      };
     };
   };
 }
