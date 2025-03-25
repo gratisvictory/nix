@@ -31,7 +31,9 @@
           subunit
           firefox
           xdg-utils
+	  gcovr
           cppcheck
+	  gtest
         ];
       };
     });

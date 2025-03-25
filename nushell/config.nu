@@ -1,4 +1,5 @@
 use starship.nu
+# use ~/.cargo/bin/nu_plugin_emoji
 
 source alias.nu
 source fnm.nu

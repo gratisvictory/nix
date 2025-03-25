@@ -14,7 +14,7 @@
     typescript
     nodejs
     rustup
-    python311
+    # python311
     # Utils
     silicon
     nix-direnv
