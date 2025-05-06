@@ -4,9 +4,12 @@ alias nv = neovim
 alias fast = fastfetch
 alias nixver = nixos-version
 alias nixcollect = sudo nix-collect-garbage -d
-alias flake = sudo nixos-rebuild switch --flake ~/nix
-alias flakeup = nix flake update
-alias flakereboot = sudo nixos-rebuild switch --flake ~/nix --reboot
+# alias flake = sudo nixos-rebuild switch --flake ~/nix
+alias flakewsl = sudo nixos-rebuild switch --flake ~/nix/flakes/wsl
+# alias flakeup = nix flake update
+alias flakeupwsl = nix flake update ~/nix/flakes/wsl
+# alias flakereboot = sudo nixos-rebuild switch --flake ~/nix --reboot
+alias flakerebootwsl = sudo nixos-rebuild switch --flake ~/nix/flakes/wsl --reboot
 alias pref = nix-prefetch-url
 alias del = sudo nix-store --gc
 alias ndev = nix develop
@@ -15,20 +18,13 @@ alias dirallow = direnv allow
 alias dirdeny = direnv deny
 alias dirclean = rm -rf ~/.cache/nix-direnv .direnv
 alias dirrel = nix-direnv-reload
-alias cup = nix flake update ~/nix/c
-alias ccpup = nix flake update ~/nix/cpp
+alias clangwslup = nix flake update ~/nix/flakes/clang
 
-def c [] {
-    echo "use flake ~/nix/c" | save .envrc
+def clangwsl [] {
+    echo "use flake ~/nix/flakes/clang" | save .envrc
     direnv allow
 }
 
-def cpp [] {
-    echo "use flake ~/nix/cpp" | save .envrc
-    direnv allow
-}
-
-# Yarn berry alias
 alias y = yarn
 alias yb = yarn build
 alias ycc = yarn cache clean
@@ -54,12 +50,10 @@ alias yap = yarn add -P
 alias yii = yarn install --immutable
 alias ydlx = yarn dlx
 
-# Cargo alias
 alias cb = cargo build
 alias cr = cargo run
 alias ca = cargo add
 
-# Pnpm alias
 alias pc = pnpm clean
 alias prv = pnpm preview
 alias pb = pnpm build

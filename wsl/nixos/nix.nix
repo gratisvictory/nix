@@ -1,7 +1,8 @@
 {
   username,
   pkgs,
-  inputs,
+  flake-inputs,
+  lib,
   ...
 }: {
   nix = {
@@ -15,7 +16,7 @@
       experimental-features = ["nix-command" "flakes"];
     };
 
-    registry.nixpkgs.flake = inputs.nixpkgs;
+    registry.nixpkgs.flake = flake-inputs.nixpkgs;
 
     package = pkgs.nixVersions.stable;
 
@@ -24,7 +25,7 @@
       keep-derivations = true
     '';
 
-    gc = {
+    gc = lib.mkDefault {
       automatic = true;
       options = "--delete-older-than 7d";
       persistent = true;
