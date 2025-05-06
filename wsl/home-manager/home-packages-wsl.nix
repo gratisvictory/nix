@@ -16,6 +16,9 @@
     rustup
     # python311
     # Utils
+    # firefox
+    xdg-utils
+    cacert
     silicon
     nix-direnv
     git-graph

@@ -1,5 +1,5 @@
 def create_left_prompt [] {
-    let dir = match (do --ignore-shell-errors { $env.PWD | path relative-to $nu.home-path }) {
+    let dir = match (do --ignore-errors { $env.PWD | path relative-to $nu.home-path }) {
         null => $env.PWD
         '' => '~'
         $relative_pwd => ([~ $relative_pwd] | path join)
@@ -88,7 +88,7 @@ $env.PATH = ($env.PATH | split row (char esep))
 
 path add ($env.HOME | path join ".cargo" "bin")
 
-$env.PATH = ($env.PATH | uniq)
+path add ($env.HOME | path join ".trae-server" "bin" "stable-0058b623d065fd0e8a2f1baf9e6d98d7d2da3e90" "bin" "remote-cli")
 
 $env.PATH = ($env.PATH | uniq)
 

@@ -43,14 +43,14 @@
           programs.nix-ld.dev.enable = true;
           programs.nix-ld.libraries = nix-ld.packages.${system}.default.libraries;
         }
-        ./wsl/nixos/default.nix
+        ../../wsl/nixos/default.nix
         home-manager.nixosModules.home-manager
         {
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
             users.${username} = {...}: {
-              imports = [./wsl/home-manager/home-wsl.nix];
+              imports = [../../wsl/home-manager/home-wsl.nix];
               _module.args = {inherit username stateVersion;};
             };
           };

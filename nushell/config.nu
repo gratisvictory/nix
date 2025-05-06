@@ -3,6 +3,7 @@ use starship.nu
 
 source alias.nu
 source fnm.nu
+source env.nu
 
 # For more information on defining custom themes, see
 # https://www.nushell.sh/book/coloring_and_theming.html

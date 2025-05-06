@@ -4,7 +4,7 @@
       enable = true;
       configFile.source = ../../../nushell/config.nu;
     };
-    carapace.enable = true;
-    carapace.enableNushellIntegration = true;
+    carapace.enable = false;
+    carapace.enableNushellIntegration = false;
   };
 }
