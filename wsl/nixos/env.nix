@@ -1,6 +1,6 @@
 {
   environment.sessionVariables = rec {
     TERMINAL = "nushell";
-    EDITOR = "cursor";
+    EDITOR = "code";
   };
 }

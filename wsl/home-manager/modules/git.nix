@@ -1,9 +1,12 @@
 {
+  # Git конфигурация
   programs.git = {
     enable = true;
     userName = "gratisvictory";
     userEmail = "gratisvictory.dev@proton.me";
-
+    delta = {
+      enable = true; # Включение delta для улучшенного diff
+    };
     extraConfig = {
       core = {
         editor = "code --wait";
@@ -51,6 +54,12 @@
         };
       };
     };
+  };
+
+  # Zoxide конфигурация (отдельно от Git)
+  programs.zoxide = {
+    enable = true;
+    enableNushellIntegration = true;
   };
 
   # Генерация вложенных gitconfig файлов для аккаунтов

@@ -1,72 +1,76 @@
 {
-  pkgs,
-  nixpkgs,
-  pkgs24_11,
+  pkgsStable,
+  pkgsUnstable,
   ...
 }: {
-  nixpkgs.config.allowUnfree = true;
-  home.packages = with pkgs; [
-    # Languages
-    nix
-    bash
-    go
-    zig
-    typescript
-    nodejs
-    rustup
-    # python311
-    # Utils
-    # firefox
-    xdg-utils
-    cacert
-    silicon
-    nix-direnv
-    git-graph
-    microfetch
-    fzf
-    ntfs3g
-    bc
-    statix
-    shellcheck
-    deadnix
-    tree-sitter
-    zip
-    gh
-    wget
-    vim
-    unzip
-    eza
-    sd
-    ripgrep
-    killall
-    jq
-    fx
-    curl
-    fd
-    du-dust
-    coreutils
-    bat
-    htop
-    bottom
-    nushell
-    starship
-    git
-    git-crypt
-    helix
-    carapace
-    prisma
-    eslint
-    nodePackages.prettier
-    dockfmt
-    cargo-cache
-    cargo-expand
-    fnm
-    fastfetch
-    alejandra
-    corepack_latest
-    bun
-    yazi
-    lazygit
-    lazydocker
+  home.packages = with pkgsUnstable; [
+    # Пример использования стабильных пакетов
+    # pkgsStable.somePackage
+    nix # Пакетный менеджер Nix
+    bash # Оболочка Bash
+    go # Язык программирования Go
+    zig # Язык программирования Zig
+    typescript # TypeScript компилятор
+    nodejs # Node.js для JavaScript разработки
+    rustup # Менеджер инструментов Rust
+    firefox # Веб-браузер (можно убрать в WSL, лучше использовать в Windows)
+    xdg-utils # Утилиты для интеграции с рабочим столом (не нужны в WSL)
+    cacert # Сертификаты CA для SSL/TLS
+    silicon # Создание красивых скриншотов кода
+    nix-direnv # Интеграция nix с direnv
+    git-graph # Визуализация git-графа в терминале
+    microfetch # Легковесный системный информер
+    fzf # Интерактивный поиск в командной строке
+    bc # Калькулятор командной строки
+    statix # Линтер для Nix
+    shellcheck # Линтер для shell-скриптов
+    deadnix # Находит мертвый код в Nix
+    tree-sitter # Парсер для подсветки синтаксиса
+    zip # Архиватор ZIP
+    gh # GitHub CLI
+    wget # Утилита для скачивания файлов
+    vim # Текстовый редактор
+    unzip # Распаковщик ZIP-архивов
+    eza # Современная замена ls
+    sd # Интуитивная замена sed
+    ripgrep # Быстрый поиск по содержимому файлов (замена grep)
+    killall # Утилита для завершения процессов по имени
+    jq # Обработчик JSON в командной строке
+    fx # Интерактивный просмотр JSON
+    curl # Утилита для передачи данных по URL
+    fd # Быстрая замена find
+    du-dust # Визуализация использования диска
+    coreutils # Базовые утилиты GNU
+    bat # Улучшенная замена cat с подсветкой синтаксиса
+    htop # Интерактивный просмотр процессов
+    bottom # Современный системный монитор
+    nushell # Современная оболочка с поддержкой структурированных данных
+    starship # Настраиваемый промпт для оболочки
+    git # Система контроля версий
+    cargo-cache # Управление кешем Cargo
+    cargo-expand # Просмотр развернутого кода макросов Rust
+    fnm # Fast Node Manager - менеджер версий Node.js
+    fastfetch # Быстрый системный информер
+    alejandra # Форматтер для Nix
+    corepack_latest # Менеджер пакетов для Node.js (yarn/pnpm)
+    bun # Быстрая среда выполнения JavaScript
+    yazi # Современный файловый менеджер для терминала
+    lazygit # TUI интерфейс для Git
+    lazydocker # TUI интерфейс для Docker
+
+    # Полезные дополнения:
+    delta # Улучшенный просмотр diff для git с подсветкой синтаксиса
+    difftastic # Структурный diff для кода, понимающий синтаксис языков
+    duf # Красивая альтернатива df для просмотра использования диска
+    hyperfine # Бенчмарк для команд оболочки с статистикой
+    just # Современная альтернатива make с более понятным синтаксисом
+    mcfly # Умный поиск по истории команд с использованием ML
+    procs # Современная замена ps с улучшенным выводом
+    tealdeer # Быстрые шпаргалки по командам (клиент tldr)
+    zoxide # Умный cd с поддержкой перехода в часто используемые директории
+    direnv # Автоматическая загрузка переменных окружения при входе в директорию
+    helix # Современный модальный редактор с tree-sitter интеграцией
+    gitui # Быстрый TUI интерфейс для git с фокусом на производительность
+    onefetch # Информация о git-репозитории в стиле neofetch
   ];
 }

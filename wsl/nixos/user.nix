@@ -1,10 +1,10 @@
 {
-  pkgs,
+  pkgsUnstable,
   username,
   ...
 }: {
   users = {
-    defaultUserShell = pkgs.nushell;
+    defaultUserShell = pkgsUnstable.nushell;
     users.${username} = {
       isNormalUser = true;
       extraGroups = ["wheel" "docker"];

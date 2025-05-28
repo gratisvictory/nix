@@ -10,7 +10,6 @@
   ];
 
   home = {
-    enableNixpkgsReleaseCheck = false;
     username = username;
     homeDirectory = "/home/${username}";
     stateVersion = stateVersion;
