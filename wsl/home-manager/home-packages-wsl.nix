@@ -6,6 +6,7 @@
   home.packages = with pkgsUnstable; [
     # Пример использования стабильных пакетов
     # pkgsStable.somePackage
+    tokei
     nix # Пакетный менеджер Nix
     bash # Оболочка Bash
     go # Язык программирования Go
