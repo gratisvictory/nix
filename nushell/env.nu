@@ -88,8 +88,6 @@ $env.PATH = ($env.PATH | split row (char esep))
 
 path add ($env.HOME | path join ".cargo" "bin")
 
-path add ($env.HOME | path join ".trae-server" "bin" "stable-0058b623d065fd0e8a2f1baf9e6d98d7d2da3e90" "bin" "remote-cli")
-
 $env.PATH = ($env.PATH | uniq)
 
 # To load from a custom file you can use:
