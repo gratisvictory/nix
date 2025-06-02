@@ -29,6 +29,7 @@
     killall
     jq
     fx
+    fnm
     curl
     fd
     du-dust
