@@ -1,4 +1,3 @@
-# Core alias
 alias v = vim
 alias nv = neovim
 alias fast = fastfetch
@@ -16,9 +15,21 @@ alias dirdeny = direnv deny
 alias dirclean = rm -rf ~/.cache/nix-direnv .direnv
 alias dirrel = nix-direnv-reload
 alias clangwslup = nix flake update ~/nix/flakes/clang
+alias jswslup = nix flake update ~/nix/flakes/js
+alias rustwslup = nix flake update ~/nix/flakes/rust
 
 def clangwsl [] {
     echo "use flake ~/nix/flakes/clang" | save .envrc
+    direnv allow
+}
+
+def jswsl [] {
+    echo "use flake ~/nix/flakes/js" | save .envrc
+    direnv allow
+}
+
+def rustwsl [] {
+    echo "use flake ~/nix/flakes/rust" | save .envrc
     direnv allow
 }
 

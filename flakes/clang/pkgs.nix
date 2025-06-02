@@ -5,6 +5,8 @@ with pkgs; [
   gcc
   gdb
   gnumake
+  strace
+  ltrace
   valgrind
   lcov
   clang-tools

@@ -1,5 +1,5 @@
 {
-  description = "clang development environment";
+  description = "JavaScript/TypeScript development environment";
 
   inputs = {
     nixos-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -19,10 +19,10 @@
       packages = import ./pkgs.nix {inherit pkgs;};
     in {
       devShells.default = pkgs.mkShell {
-        name = "clang-dev-shell";
+        name = "frontend-dev-shell";
         buildInputs = packages;
         shellHook = ''
-          echo "Welcome to the clang development shell!"
+          echo "Welcome to your JavaScript/TypeScript development environment!"
         '';
       };
     });
