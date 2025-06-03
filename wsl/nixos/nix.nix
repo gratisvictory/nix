@@ -15,13 +15,13 @@
       auto-optimise-store = true;
       experimental-features = ["nix-command" "flakes"];
 
-      warn-dirty = false; # Отключает предупреждения о грязном git-репозитории
-      fallback = true; # Разрешает использование двоичных кэшей, если сборка не удалась
-      max-jobs = "auto"; # Автоматически определяет количество параллельных заданий
-      cores = 0; # Использует все доступные ядра для сборки
+      warn-dirty = false;
+      fallback = true;
+      max-jobs = "auto";
+      cores = 0;
       substituters = [
         "https://cache.nixos.org"
-        "https://nix-community.cachix.org" # Кэш nix-community
+        "https://nix-community.cachix.org"
       ];
       trusted-public-keys = [
         "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
@@ -42,16 +42,15 @@
     '';
 
     gc = lib.mkDefault {
-      automatic = true; # Включает автоматическую сборку мусора
-      options = "--delete-older-than 7d"; # Удаляет пакеты старше 7 дней
-      persistent = true; # Делает сборку мусора постоянной
-      dates = "weekly"; # Запускает сборку мусора еженедельно
+      automatic = true;
+      options = "--delete-older-than 7d";
+      persistent = true;
+      dates = "weekly";
     };
 
-    # Оптимизация использования диска
     optimise = {
-      automatic = true; # Автоматически оптимизирует хранилище
-      dates = ["weekly"]; # Запускает оптимизацию еженедельно
+      automatic = true;
+      dates = ["weekly"];
     };
   };
 }

@@ -1,10 +1,11 @@
-{
+{...}: {
   imports = [
     ./bat.nix
     ./eza.nix
     ./git.nix
     ./lazygit.nix
-    ./neovim.nix
+    ./yazi.nix
     ./nushell.nix
+    ./direnv.nix
   ];
 }

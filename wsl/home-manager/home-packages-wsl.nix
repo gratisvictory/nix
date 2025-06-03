@@ -1,8 +1,4 @@
-{
-  pkgsStable,
-  pkgsUnstable,
-  ...
-}: {
+{pkgsUnstable, ...}: {
   home.packages = with pkgsUnstable; [
     # pkgsStable.somePackage
     nix
@@ -15,6 +11,12 @@
     git-graph
     fzf
     bc
+    neovim
+    less
+    imv
+    mpv
+    zathura
+    unar
     statix
     shellcheck
     deadnix

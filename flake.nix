@@ -54,7 +54,6 @@
       stable = pkgsStable;
     };
   in {
-    # NixOS configuration
     nixosConfigurations.${hostname} = nixpkgs-unstable.lib.nixosSystem {
       inherit system;
       specialArgs = {
@@ -80,19 +79,13 @@
               programs.nix-ld.libraries = flake-inputs.nix-ld.packages.${system}.default.libraries;
             }
             ./wsl/nixos/default.nix
-            flake-inputs.home-manager.nixosModules.home-manager
             {
               home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
                 extraSpecialArgs = {
-                  inherit pkgsUnstable pkgsStable;
+                  inherit username stateVersion pkgsUnstable pkgsStable;
                 };
                 users.${username} = {...}: {
                   imports = [./wsl/home-manager/home-wsl.nix];
-                  _module.args = {
-                    inherit username stateVersion pkgsUnstable pkgsStable;
-                  };
                 };
               };
             }
