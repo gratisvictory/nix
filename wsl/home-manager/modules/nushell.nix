@@ -4,8 +4,8 @@
       enable = true;
       configFile.source = ../../../nushell/config.nu;
       extraConfig = ''
-        use ~/.cache/starship/init.nu
-        use zoxide
+        # use ~/.cache/starship/init.nu
+        # use zoxide
 
         alias ls = eza
         alias ll = "eza -l"
