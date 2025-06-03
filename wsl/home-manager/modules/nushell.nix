@@ -4,23 +4,20 @@
       enable = true;
       configFile.source = ../../../nushell/config.nu;
       extraConfig = ''
-        # use ~/.cache/starship/init.nu
-        # use zoxide
-
         alias ls = eza
-        alias ll = "eza -l"
-        alias la = "eza -la"
-        alias lt = "eza --tree"
+        alias ll = eza -l
+        alias la = eza -la
+        alias lt = eza --tree
 
-        alias lg = "eza --git-ignore"
-        alias lm = "eza --sort=modified"
-        alias lz = "eza --sort=size"
-        alias ld = "eza --only-dirs"
-        alias lf = "eza --only-files"
+        alias lg = eza --git-ignore
+        alias lm = eza --sort=modified
+        alias lz = eza --sort=size
+        alias ld = eza --only-dirs
+        alias lf = eza --only-files
 
-        alias lla = "eza -la --group-directories-first"
-        alias llt = "eza -l --tree"
-        alias llg = "eza -l --git"
+        alias lla = eza -la --group-directories-first
+        alias llt = eza -l --tree
+        alias llg = eza -l --git
 
         alias y = yazi
 
@@ -30,7 +27,7 @@
         alias batj = bat --language=json
         alias baty = bat --language=yaml
         alias batx = bat --language=xml
-        alias batm = "bat --style=plain --language=markdown"
+        alias batm = bat --style=plain --language=markdown
 
         alias batdiff = git diff --name-only --diff-filter=d | xargs bat --diff
 
