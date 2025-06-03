@@ -54,7 +54,7 @@
         os = {
           disabled = false;
           symbols = {
-            NixOS = "❄️  ";
+            NixOS = "❄️ ";
           };
         };
 
